@@ -1,0 +1,1055 @@
+<div class="row">
+        <div class="col-5 col-md-8">.col-md-8</div>
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>
+ví dụ có 2 class thế này thì phải đợi khi nào col-md hết hiệu lực thì class còn lại mới được 
+
+
+
+
+<div class="row row-cols-2">
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+</div>
+row-cols-2: xác định số cột hiển thị trên một hàng (VD: 2 cột)
+row-cols-auto: tuỳ chỉnh độ rộng cột theo content
+
+
+
+<div class="row">
+        <div class="col ">col1</div>
+        <div class="col ">col2</div>
+</div>
+col: các phần tử sẽ trải đều ra bằng nhau cho đủ container
+
+
+
+
+
+
+
+
+<div class="container text-center">
+      <div class="row align-items-end">
+        <div class="col">
+          One of three columns
+        </div>
+        <div class="col">
+          One of three columns
+        </div>
+        <div class="col">
+          One of three columns
+        </div>
+      </div>
+</div>
+align-items-end: test ví dụ vì k biết mô tả kiểu gì
+
+
+
+
+
+
+
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col align-self-start">
+      One of three columns
+    </div>
+    <div class="col align-self-center">
+      One of three columns
+    </div>
+    <div class="col align-self-end">
+      One of three columns
+    </div>
+  </div>
+</div>
+align-self-start: test ví dụ vì k biết mô tả kiểu gì
+
+
+
+
+
+
+
+
+<div class="container text-center">
+      <div class="row">
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+    
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
+    
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+      </div>
+    </div>
+<div class="w-100"></div>: buộc các hàng tiếp theo xuống dòng mới
+
+
+
+
+
+
+
+<div class="container text-center">
+      <div class="row">
+        <div class="col">
+          First in DOM, no order applied
+        </div>
+        <div class="col order-2">
+          Second in DOM, with a larger order
+        </div>
+        <div class="col order-1">
+          Third in DOM, with an order of 1
+        </div>
+      </div>
+    </div>
+hoặc 
+<div class="container text-center">
+  <div class="row">
+    <div class="col order-last">
+      First in DOM, ordered last
+    </div>
+    <div class="col">
+      Second in DOM, unordered
+    </div>
+    <div class="col order-first">
+      Third in DOM, ordered first
+    </div>
+  </div>
+</div>
+order-1, order-first: Sắp xếp vị trí của các phần tử, mặc định nếu không có order thì phần tử đó đứng đầu   
+
+
+
+
+
+
+
+
+
+
+<div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+<div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+trường hợp này tưởng như offset-md-0 không cần thiết nhưng thực sự rất cần thiết vì:
+-nếu không có offset-md-0 thì div thứ 2 sẽ bị lệch về bên phải 2 cột vì nó có cái thuộc tính offset-sm-2 áp dụng cho small trở lên. vậy ta phải đặt offset-md-0 để căn lại left về 0 cho div thứ 2
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+</div>
+ms-auto: căn lề cột chứa nó dính sát sang bên phải 
+
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col-auto me-auto">.col-auto .me-auto</div>
+    <div class="col-auto">.col-auto</div>
+</div>
+col-auto: tự động điều chỉnh kích thước theo nội dung
+me-auto: dính sát bên trái
+
+
+
+
+
+
+
+
+
+<div class="col-5 p-3 mb-2">
+      .col-3: width of 25%
+    </div>
+    
+    <div class="col-sm-9 p-3">
+      .col-sm-9: width of 75% above sm breakpoint
+    </div>
+col-5 p-3 mb-2: được đặt ra khỏi container và row luôn, padding 3, margin-bottom 2
+
+
+
+
+
+
+
+
+
+
+
+Mặc định một đơn vị trong bootstrap bằng 1 rem. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container px-4 text-center">
+  <div class="row gx-5">
+    <div class="col">
+     <div class="p-3">Custom column padding</div>
+    </div>
+    <div class="col">
+      <div class="p-3">Custom column padding</div>
+    </div>
+  </div>
+</div>
+gx: gutter theo chiều ngang
+gy: gutter theo chiều dọc
+g-number: gutter theo cả chiều ngang và chiều dọc
+
+
+
+
+
+
+
+
+
+
+<div class="container text-center">
+      <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <div class="col">
+          <div class="p-3">Row column</div>
+        </div>
+        <div class="col">
+          <div class="p-3">Row column</div>
+        </div>
+        <div class="col">
+          <div class="p-3">Row column</div>
+        </div>
+        <div class="col">
+          <div class="p-3">Row column</div>
+        </div>
+      </div>
+    </div>
+row-cols-2 : chỉ định số cột mỗi hàng ( mỗi hàng 2 cột)
+row-cols-lg-5: chỉ định số cột mỗi hàng từ large ( mỗi hàng 5 cột)
+g-0: no gutter
+
+
+
+
+
+
+
+
+
+<div class="grid text-center">
+      <div class="g-col-4">.g-col-4</div>
+      <div class="g-col-4">.g-col-4</div>
+      <div class="g-col-4">.g-col-4</div>
+    </div>
+Thử vd để biết thêm
+
+
+
+
+
+
+
+
+ <div class="grid text-center">
+      <div class="g-col-3 g-start-4">.g-col-3 .g-start-2</div>
+      <div class="g-col-4 g-start-7">.g-col-4 .g-start-6</div>
+    </div>
+thử ví dụ, g-start-4: col này bắt đầu ở cột 4/12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid text-center" style="--bs-columns: 3;">
+      <div>
+        First auto-column
+        <div class="grid">
+          <div>Auto-column</div>
+          <div>Auto-column</div>
+        </div>
+      </div>
+      <div>
+        Second auto-column
+        <div class="grid" style="--bs-columns: 12;">
+          <div class="g-col-6">6 of 12</div>
+          <div class="g-col-4">4 of 12</div>
+          <div class="g-col-2">2 of 12</div>
+        </div>
+      </div>
+      <div>Third auto-column</div>
+    </div>
+thử ví dụ để biết thêm
+dòng <div class="grid text-center" style="--bs-columns: 3;"> sẽ định nghĩa cái row này có 3 cột, các cột bên trong mà không định nghĩa bs khác thì cũng mặc định lớp con của các cột bên trong đó cũng có 3 cột như thẻ cha.
+
+
+
+
+
+
+
+<div class="grid text-center" style="--bs-columns: 10; --bs-gap: 1rem;">
+  <div class="g-col-6">.g-col-6</div>
+  <div class="g-col-4">.g-col-4</div>
+</div>
+6+4 = 10
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid text-center" style="--bs-rows: 3; --bs-columns: 3;">
+  <div>Auto-column</div>
+  <div class="g-start-2" style="grid-row: 2">Auto-column</div>
+  <div class="g-start-3" style="grid-row: 3">Auto-column</div>
+</div>
+thử ví dụ
+
+
+
+
+
+
+
+<div class="grid text-center" style="--bs-gap: .25rem 1rem;">
+  <div class="g-col-6">.g-col-6</div>
+  <div class="g-col-6">.g-col-6</div>
+
+  <div class="g-col-6">.g-col-6</div>
+  <div class="g-col-6">.g-col-6</div>
+</div>
+xác định gutter
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem;">
+  <div style="grid-column: span 14;">14 columns</div>
+  <div class="g-col-4">.g-col-4</div>
+</div>
+chia không theo cái 12 layout
+
+
+
+
+
+
+
+
+
+To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
+thử ví dụ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table>
+  <caption>
+    This is an example table, and this is its caption to describe the contents.
+  </caption>
+  <thead>
+    <tr>
+      <th>Table heading</th>
+      <th>Table heading</th>
+      <th>Table heading</th>
+      <th>Table heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+  </tbody>
+</table>
+table trong bootstrap
+
+
+
+
+
+
+
+
+
+<div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+form nhập input;
+mb: margin-bottom
+form-control: css cho một form nhập
+có 3 kích thước cho form control:
+form-control-lg: lớn
+form-control: mặc định
+form-control-sm: nhỏ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<label for="exampleDataList" class="form-label">Datalist example</label>
+    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+    <datalist id="datalistOptions">
+      <option value="San Francisco">
+      </option><option value="New York">
+      </option><option value="Seattle">
+      </option><option value="Los Angeles">
+      </option><option value="Chicago">
+    </option></datalist>
+thẻ datalist dùng để gợi ý cho trường nhập dữ liệu
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>
+    </div>
+tạo switch 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+floating label: tạo label nổi, thử sẽ biết
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">Address 2</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">State</label>
+        <select id="inputState" class="form-select">
+          <option selected="">Choose...</option>
+          <option>New Jersey</option>
+          <option>	Georgia</option>
+          <option>New Hampshire</option>
+          <option>	Ohio</option>
+          <option>Tennessee</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+    </form>
+một form đăng kí đơn giản bằng bootstrap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form class="was-validated">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        <div class="valid-feedback">Name is valid.</div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        <div class="valid-feedback">Email is valid.</div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+        <div class="valid-feedback">Password is valid.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+validation bootstrap
+gồm  2 cái chính là  was-validate & needs-validate
+
+
+
+
+
+
+
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  </ol>
+</nav>
+Breadcrumb: đường dẫn
+
+
+
+
+
+
+
+
+
+
+<div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Accordion Item #1
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+          <div class="accordion-body">
+            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Accordion Item #2
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+Accordion trong Bootstrap là một thành phần thiết kế giúp hiển thị nội dung ẩn hoặc rút gọn, thường được sử dụng để hiển thị thông tin một cách tổ chức trong một không gian giới hạn. Accordion cho phép người dùng mở rộng mỗi phần để xem nội dung chi tiết mà không làm mất thông tin khác.
+
+
+
+
+
+
+
+
+
+
+
+Syntax: 
+my-5: margin theo trục y 5rem
+d-grid:: display grid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button-plugin
+toggle button dùng để chuyển đổi trạng thái button
+<p class="d-inline-flex gap-1">
+      <button type="button" class="btn" data-bs-toggle="button" aria-pressed="false">Toggle button</button>
+
+      <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="false">Active toggle button</button>
+
+      <button type="button" class="btn" disabled="" data-bs-toggle="button">Disabled toggle button</button>
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Carousel: cho phép hình ảnh trượt mượt mà
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Carousel -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ul>
+    
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img1.jpg" alt="Image 1" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+            <img src="img2.jpg" alt="Image 2" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+            <img src="img3.jpg" alt="Image 3" width="1100" height="500">
+        </div>
+    </div>
+    
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+test thử, thêm nhiều mẫu nữa ở mục Carousel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Right-aligned menu example
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item" type="button">Action</button></li>
+    <li><button class="dropdown-item" type="button">Another action</button></li>
+    <li><button class="dropdown-item" type="button">Something else here</button></li>
+  </ul>
+</div>
+dropdown menu items và có tự động aligh trên dưới, test với màn hình có thanh cuộn sẽ thấy
+và còn nhiều cái khác nữa chủ động lên bootstrap tìm nhá
+
+
+
+
+
+
+
+
+
+modal
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav bar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Placeholders: hiển thị trang thái loading của trang web
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Popover: hiển thị ô thoại nhỏ, như kiểu thông báo,...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+progress: custom thanh loading 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+test để biết thêm
+<nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">First</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">Second</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <h4 id="scrollspyHeading1">First heading</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui perspiciatis inventore debitis molestiae modi aspernatur. Recusandae quisquam reiciendis fugit, magni excepturi alias, modi quaerat minus atque inventore ipsa aut hic.</p>
+        <h4 id="scrollspyHeading2">Second heading</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui perspiciatis inventore debitis molestiae modi aspernatur. Recusandae quisquam reiciendis fugit, magni excepturi alias, modi quaerat minus atque inventore ipsa aut hic.</p>
+        <h4 id="scrollspyHeading3">Third heading</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui perspiciatis inventore debitis molestiae modi aspernatur. Recusandae quisquam reiciendis fugit, magni excepturi alias, modi quaerat minus atque inventore ipsa aut hic.</p>
+        <h4 id="scrollspyHeading4">Fourth heading</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui perspiciatis inventore debitis molestiae modi aspernatur. Recusandae quisquam reiciendis fugit, magni excepturi alias, modi quaerat minus atque inventore ipsa aut hic.</p>
+        <h4 id="scrollspyHeading5">Fifth heading</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui perspiciatis inventore debitis molestiae modi aspernatur. Recusandae quisquam reiciendis fugit, magni excepturi alias, modi quaerat minus atque inventore ipsa aut hic.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+toast hiển thị một thông báo ngắn ngủi cho người dùng, cái này phải dùng cả mã js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+me: margin right
+ms: margin left
